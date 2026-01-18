@@ -22,6 +22,21 @@ class DevLogResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'title';
 
+    public static function getModelLabel(): string
+    {
+        return 'Bitácora';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Bitácoras';
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Bitácoras';
+    }
+
     public static function form(Schema $schema): Schema
     {
         return DevLogForm::configure($schema);

@@ -16,10 +16,11 @@ export default {
                 display: ['Montserrat', 'sans-serif'], // For headers mimicking Gotham Black
             },
             colors: {
-                primary: '#1270AF',
-                accent: '#177777',
-                background: '#404041',
-                'text-secondary': '#808184',
+                primary: '#3B82F6', // Blue 500
+                accent: '#34D399',  // Emerald 400
+                background: '#020617', // Slate 950
+                'surface': '#1E293B', // Slate 800
+                'text-secondary': '#94A3B8', // Slate 400
             },
         },
     },

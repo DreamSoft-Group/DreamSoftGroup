@@ -1,0 +1,30 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+@import '../../css/app.css';
+
+/* Login Page Background */
+body.fi-body.fi-panel-admin.fi-page-auth-login {
+    background-color: #020617 !important; /* Slate 950 */
+    background-image: 
+        radial-gradient(at top center, #1e293b 0%, #020617 100%),
+        radial-gradient(at top left, rgba(59, 130, 246, 0.15), transparent 50%),
+        radial-gradient(at bottom right, rgba(52, 211, 153, 0.15), transparent 50%) !important;
+    background-attachment: fixed;
+}
+
+/* Glassmorphism for Login Card */
+.fi-page-auth-login section {
+    background-color: rgba(30, 41, 59, 0.5) !important; /* Surface / 50% */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 30px -10px rgba(59, 130, 246, 0.3);
+}
+
+/* Adjusting Inputs in Login */
+.fi-page-auth-login input {
+    background-color: rgba(2, 6, 23, 0.5) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}

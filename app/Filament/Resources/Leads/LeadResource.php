@@ -22,6 +22,21 @@ class LeadResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'email';
 
+    public static function getModelLabel(): string
+    {
+        return 'Prospecto';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Prospectos';
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return 'Prospectos';
+    }
+
     public static function form(Schema $schema): Schema
     {
         return LeadForm::configure($schema);
