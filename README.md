@@ -53,6 +53,29 @@
     npm run dev
     ```
 
+## 📘 Manual de Uso del Admin
+
+El panel administrativo (`/admin`) es el corazón de **The Dream Lab**. Aquí se gestionan los tres módulos principales:
+
+### 1. Proyectos (`Projects`)
+Representa cada producto o experimento en el portafolio.
+*   **Campos Clave**:
+    *   `Status`: Define la etapa del ciclo de vida (`Concept`, `Development`, `Beta`, `Live`).
+    *   `Access Level`: Controla quién puede ver o acceder (`Free`, `Waitlist`, `Premium`).
+    *   `Slug`: URL amigable generada automáticamente.
+*   **Uso**: Crea un proyecto aquí para que aparezca automáticamente en la Landing Page.
+
+### 2. Bitácoras (`DevLogs`)
+Diario de desarrollo técnico. Funciona como un blog vinculado a cada proyecto.
+*   **Relación**: Cada entrada debe pertenecer a un `Proyecto`.
+*   **Publicación**: Usa el campo `Published At` para programar o publicar inmediatamente.
+*   **Contenido**: Soporta texto enriquecido para explicar avances técnicos, changelogs o roadmaps.
+
+### 3. Prospectos (`Leads`)
+Base de datos de usuarios interesados.
+*   **Origen**: Se llena automáticamente cuando un visitante se registra en la "Waitlist" desde el frontend.
+*   **Status**: `Pending` por defecto. Puede usarse para dar acceso beta manual a ciertos usuarios.
+
 ## 📄 Licencia
 
 Este software es propiedad de **DreamSoft Group**. Todos los derechos reservados.
