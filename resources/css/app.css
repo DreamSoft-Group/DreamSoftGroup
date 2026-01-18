@@ -1,3 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@source "../views";
+@source "../../../app/Filament";
+@source "../../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views";
+
+@plugin "tailwindcss-animate";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --font-sans: 'Montserrat', 'Figtree', sans-serif;
+    --font-display: 'Montserrat', sans-serif;
+
+    --color-primary: #3B82F6;
+    --color-accent: #34D399;
+    --color-background: #020617;
+    --color-surface: #1E293B;
+    --color-text-secondary: #94A3B8;
+}
+
+/* Custom Utilities if needed */
+@layer utilities {
+    .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}

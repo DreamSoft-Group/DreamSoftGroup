@@ -15,31 +15,10 @@
 <body class="bg-background text-white font-sans antialiased selection:bg-primary selection:text-white">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-background/50 backdrop-blur-xl border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0">
-                    <span class="font-display font-black text-2xl tracking-tighter text-white">
-                        DREAM<span class="text-primary drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]">SOFT</span>
-                    </span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#showcase"
-                            class="text-gray-300 hover:text-white hover:bg-white/5 transition-all px-3 py-2 rounded-md text-sm font-medium">Proyectos</a>
-                        <a href="#process"
-                            class="text-gray-300 hover:text-white hover:bg-white/5 transition-all px-3 py-2 rounded-md text-sm font-medium">Proceso</a>
-                        <a href="/admin"
-                            class="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 hover:border-primary/50 px-4 py-2 rounded-full text-sm font-bold transition-all shadow-[0_0_15px_-3px_rgba(59,130,246,0.3)] hover:shadow-[0_0_20px_-3px_rgba(59,130,246,0.5)]">Acceso
-                            Clientes</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <x-navbar />
 
     <!-- Hero Section -->
-    <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-12">
         <!-- Background Gradients -->
         <div
             class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-background to-background">
@@ -98,60 +77,8 @@
                     productos SaaS y herramientas open source.</p>
             </div>
 
-            <!-- Dynamic Grid (Livewire Component Placeholder) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Static Example Card 1 -->
-                <div
-                    class="group relative bg-surface/50 border border-white/5 rounded-3xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_30px_-10px_rgba(59,130,246,0.3)] hover:-translate-y-2">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    </div>
-                    <div class="aspect-video bg-slate-900 relative overflow-hidden">
-                        <!-- Image placeholder -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <span
-                                class="px-3 py-1 bg-accent/20 border border-accent/50 text-accent rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md">Beta</span>
-                        </div>
-                    </div>
-                    <div class="p-8 relative">
-                        <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Project Alpha
-                        </h3>
-                        <p class="text-text-secondary text-sm mb-6 line-clamp-2 leading-relaxed">Una descripción corta
-                            del proyecto que explica su valor principal y tecnología.</p>
-                        <a href="#"
-                            class="inline-flex items-center text-sm font-bold text-white group-hover:text-primary transition-colors">
-                            Ver Detalles <span class="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Static Example Card 2 -->
-                <div
-                    class="group relative bg-surface/50 border border-white/5 rounded-3xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_30px_-10px_rgba(59,130,246,0.3)] hover:-translate-y-2">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    </div>
-                    <div class="aspect-video bg-slate-900 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
-                        <div class="absolute bottom-4 left-4">
-                            <span
-                                class="px-3 py-1 bg-primary/20 border border-primary/50 text-primary rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md">Concept</span>
-                        </div>
-                    </div>
-                    <div class="p-8 relative">
-                        <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">SaaS Starter kit
-                        </h3>
-                        <p class="text-text-secondary text-sm mb-6 line-clamp-2 leading-relaxed">Boilerplate completo
-                            para SaaS con facturación, equipos y API.</p>
-                        <a href="#"
-                            class="inline-flex items-center text-sm font-bold text-white group-hover:text-primary transition-colors">
-                            Ver Detalles <span class="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-20 text-center">
+            <!-- Dynamic Grid -->
+            <div class="mt-12">
                 @livewire('project-list')
             </div>
         </div>

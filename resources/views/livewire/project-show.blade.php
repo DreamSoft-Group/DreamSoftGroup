@@ -5,7 +5,7 @@ use Livewire\Volt\Component as VoltComponent;
 use App\Models\Project;
 use Livewire\Attributes\Layout;
 
-new #[Layout('layouts.app')] class extends Component {
+new #[Layout('layouts.public')] class extends Component {
     public Project $project;
 
     public function mount($slug)
@@ -43,7 +43,8 @@ new #[Layout('layouts.app')] class extends Component {
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
                 <div>
                     <h1 class="text-5xl md:text-6xl font-display font-black tracking-tight leading-tight">
-                        {{ $project->title }}</h1>
+                        {{ $project->title }}
+                    </h1>
                 </div>
                 <div>
                     @php
