@@ -38,13 +38,13 @@
                 THE DREAM LAB
             </span>
             <h1
-                class="text-5xl md:text-7xl lg:text-8xl font-display font-black tracking-tight leading-tight mb-8 drop-shadow-2xl">
+                class="text-4xl md:text-7xl lg:text-8xl font-display font-black tracking-tight leading-tight mb-8 drop-shadow-2xl">
                 Usted lo sueña y <br />
                 <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-accent animate-gradient">nosotros
                     lo desarrollamos.</span>
             </h1>
-            <p class="mt-6 max-w-2xl mx-auto text-xl md:text-2xl text-text-secondary font-light leading-relaxed">
+            <p class="mt-6 max-w-2xl mx-auto text-lg md:text-2xl text-text-secondary font-light leading-relaxed">
                 Transformamos ideas complejas en software de alto impacto. <br class="hidden md:block" /> Desde el
                 concepto hasta el código.
             </p>
@@ -63,7 +63,7 @@
 
     <!-- Showcase Grid -->
     <div id="showcase"
-        class="py-24 bg-background relative overflow-hidden md:min-h-screen flex flex-col justify-center">
+        class="py-16 md:py-24 bg-background relative overflow-hidden md:min-h-screen flex flex-col justify-center">
         <!-- Decorational Grid -->
         <div
             class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
@@ -72,7 +72,7 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
                 <h2
-                    class="text-3xl md:text-5xl font-display font-black mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+                    class="text-2xl md:text-5xl font-display font-black mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
                     Portafolio de Productos</h2>
                 <p class="text-text-secondary text-lg max-w-2xl mx-auto">Explora nuestros últimos experimentos,
                     productos SaaS y herramientas open source.</p>
