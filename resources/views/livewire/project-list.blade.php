@@ -43,9 +43,9 @@ new class extends Component {
                 </div>
             </div>
             
-            <div class="p-8 relative">
-                <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">{{ $project->title }}</h3>
-                <p class="text-text-secondary text-sm mb-6 line-clamp-2 leading-relaxed">{{ $project->short_description }}</p>
+            <div class="p-6 relative">
+                <h3 class="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{{ $project->title }}</h3>
+                <p class="text-text-secondary text-sm mb-4 line-clamp-2 leading-relaxed">{{ $project->short_description }}</p>
                 <a href="{{ route('projects.show', $project->slug) }}"
                     class="inline-flex items-center text-sm font-bold text-white group-hover:text-primary transition-colors" wire:navigate>
                     Ver Detalles <span class="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
