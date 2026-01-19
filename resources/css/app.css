@@ -23,4 +23,13 @@
     .text-shadow {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
+
+    .layout-zoom-75 {
+        zoom: 0.75;
+        /* Firefox fallback */
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: top center;
+        width: 133.333%;
+        /* Compensate for scale down */
+    }
 }
