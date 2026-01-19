@@ -85,6 +85,110 @@
         </div>
     </div>
 
+    <!-- Process Section -->
+    <div id="process" class="py-16 md:py-24 bg-background relative overflow-hidden">
+        <!-- Decorational Backgrounds -->
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] opacity-20 pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] opacity-20 pointer-events-none">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 md:mb-24 relative z-10">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-primary text-xs font-bold tracking-widest uppercase mb-4">Workflow</span>
+                <h2
+                    class="text-3xl md:text-5xl font-display font-black mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+                    Nuestro Proceso
+                </h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+                    Una metodología refinada para transformar ideas abstractas en productos digitales excepcionales.
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Connector Line (Desktop) -->
+                <div
+                    class="hidden md:block absolute top-[28%] left-[10%] right-[10%] h-px border-t-2 border-dashed border-white/5 z-0">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
+                    <!-- Step 1 -->
+                    <div
+                        class="group relative bg-gradient-to-b from-surface/50 to-background border border-white/5 rounded-3xl p-8 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_-5px_rgba(59,130,246,0.3)] backdrop-blur-sm">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl">
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center font-black text-2xl text-white mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                01</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Descubrimiento</h3>
+                            <p
+                                class="text-text-secondary text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Analizamos requerimientos, definimos objetivos claros y trazamos la ruta crítica del
+                                proyecto.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                        class="group relative bg-gradient-to-b from-surface/50 to-background border border-white/5 rounded-3xl p-8 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_-5px_rgba(59,130,246,0.3)] backdrop-blur-sm">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl">
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center font-black text-2xl text-white mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                02</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Diseño</h3>
+                            <p
+                                class="text-text-secondary text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Creamos experiencias visuales intuitivas, sistemas de diseño escalables y prototipos
+                                interactivos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                        class="group relative bg-gradient-to-b from-surface/50 to-background border border-white/5 rounded-3xl p-8 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_-5px_rgba(59,130,246,0.3)] backdrop-blur-sm">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl">
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center font-black text-2xl text-white mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                03</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Desarrollo</h3>
+                            <p
+                                class="text-text-secondary text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Codificación ágil con estándares modernos, arquitectura robusta y testing continuo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div
+                        class="group relative bg-gradient-to-b from-surface/50 to-background border border-white/5 rounded-3xl p-8 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_-5px_rgba(59,130,246,0.3)] backdrop-blur-sm">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl">
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center font-black text-2xl text-white mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300 shadow-lg">
+                                04</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Lanzamiento</h3>
+                            <p
+                                class="text-text-secondary text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                                Despliegue automatizado, optimización de rendimiento y monitoreo en tiempo real.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="border-t border-white/5 py-16 bg-background relative z-10">
         <div class="max-w-7xl mx-auto px-4 text-center">
