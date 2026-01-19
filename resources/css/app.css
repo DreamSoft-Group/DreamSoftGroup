@@ -20,6 +20,12 @@
 
 /* Custom Utilities if needed */
 @layer utilities {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
     .text-shadow {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
@@ -31,5 +37,6 @@
         -moz-transform-origin: top center;
         width: 133.333%;
         /* Compensate for scale down */
+        overflow-x: hidden;
     }
 }
