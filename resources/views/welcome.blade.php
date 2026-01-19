@@ -12,7 +12,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-background text-white font-sans antialiased selection:bg-primary selection:text-white">
+<body class="bg-background text-white font-sans antialiased selection:bg-primary selection:text-white layout-zoom-90">
 
     <!-- Navbar -->
     <x-navbar />
@@ -62,7 +62,8 @@
     </div>
 
     <!-- Showcase Grid -->
-    <div id="showcase" class="py-24 bg-background relative overflow-hidden">
+    <div id="showcase"
+        class="py-24 bg-background relative overflow-hidden md:min-h-screen flex flex-col justify-center">
         <!-- Decorational Grid -->
         <div
             class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">

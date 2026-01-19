@@ -14,7 +14,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-background text-white font-sans antialiased selection:bg-primary selection:text-white layout-zoom-75">
+<body class="bg-background text-white font-sans antialiased selection:bg-primary selection:text-white layout-zoom-90">
 
     <x-navbar />
 
