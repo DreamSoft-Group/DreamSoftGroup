@@ -22,6 +22,15 @@ export default {
                 'surface': '#1E293B', // Slate 800
                 'text-secondary': '#94A3B8', // Slate 400
             },
+            keyframes: {
+                'dash-flow': {
+                    '0%': { strokeDashoffset: '100' },
+                    '100%': { strokeDashoffset: '0' },
+                },
+            },
+            animation: {
+                'dash-flow': 'dash-flow 2s linear infinite',
+            },
         },
     },
 

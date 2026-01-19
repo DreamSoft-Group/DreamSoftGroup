@@ -109,10 +109,21 @@
             </div>
 
             <div class="relative">
-                <!-- Connector Line (Desktop) -->
-                <div
-                    class="hidden md:block absolute top-[28%] left-[10%] right-[10%] h-px border-t-2 border-dashed border-white/5 z-0">
+                <!-- Curved Connector Line (Desktop) -->
+                <div class="hidden md:block absolute inset-0 z-0 pointer-events-none">
+                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" /> <!-- Primary -->
+                                <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" /> <!-- Accent -->
+                            </linearGradient>
+                        </defs>
+                        <path d="M 12.5,50 Q 25,20 37.5,50 Q 50,80 62.5,50 Q 75,20 87.5,50" fill="none"
+                            stroke="url(#lineGradient)" stroke-width="2" vector-effect="non-scaling-stroke"
+                            stroke-dasharray="4 4" class="animate-dash-flow opacity-50" />
+                    </svg>
                 </div>
+
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
                     <!-- Step 1 -->
