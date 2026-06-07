@@ -1,24 +1,41 @@
-*.log
+# Build artifacts
+dist/
+dreamlab-*.zip
+.env.production
+composer_install.log
+npm_build.log
+build.log
+
+# IDE / OS
+.vscode/
+.idea/
 .DS_Store
+Thumbs.db
+
+# Laravel
 .env
 .env.backup
 .env.production
-.phpactor.json
 .phpunit.result.cache
-/.fleet
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
-/auth.json
-/node_modules
+.phpunit.cache/
+/storage/*.key
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/framework/cache/*
+!/storage/framework/cache/.gitkeep
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+
+# Dependencies
+node_modules/
+/vendor/
+
+# Vite build (re-generado en deploy)
 /public/build
 /public/hot
 /public/storage
-/storage/*.key
-/storage/pail
-/vendor
-Homestead.json
-Homestead.yaml
-Thumbs.db
+
+# Tests
+/coverage/
