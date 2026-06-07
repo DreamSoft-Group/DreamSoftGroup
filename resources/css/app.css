@@ -16,102 +16,24 @@
     --color-background: #020617;
     --color-surface: #1E293B;
     --color-text-secondary: #94A3B8;
+
+    --animate-dash-flow: dash-flow 2s linear infinite;
 }
 
-/* Custom Utilities if needed */
-@layer utilities {
+@keyframes dash-flow {
+    0% { stroke-dashoffset: 100; }
+    100% { stroke-dashoffset: 0; }
+}
 
+@layer base {
     html,
     body {
         overflow-x: hidden;
     }
+}
 
+@layer utilities {
     .text-shadow {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .layout-zoom-75 {
-        zoom: 0.75;
-    }
-
-    /* Firefox-specific fix */
-    @supports (-moz-appearance:none) {
-        .layout-zoom-75 {
-            zoom: 1;
-            transform: scale(0.75);
-            transform-origin: top center;
-            width: 133.333%;
-            overflow-x: hidden;
-        }
-    }
-
-    .layout-zoom-90 {
-        zoom: 0.9;
-    }
-
-    @supports (-moz-appearance:none) {
-        .layout-zoom-90 {
-            zoom: 1;
-            transform: scale(0.9);
-            transform-origin: top center;
-            width: 111.111%;
-            overflow-x: hidden;
-        }
-    }
-
-    .layout-zoom-80 {
-        zoom: 0.8;
-    }
-
-    @supports (-moz-appearance:none) {
-        .layout-zoom-80 {
-            zoom: 1;
-            transform: scale(0.8);
-            transform-origin: top center;
-            width: 125%;
-            overflow-x: hidden;
-        }
-    }
-
-    .layout-zoom-85 {
-        zoom: 0.85;
-    }
-
-    @supports (-moz-appearance:none) {
-        .layout-zoom-85 {
-            zoom: 1;
-            transform: scale(0.85);
-            transform-origin: top center;
-            width: 117.647%;
-            overflow-x: hidden;
-        }
-    }
-
-    .layout-zoom-83 {
-        zoom: 0.83;
-    }
-
-    @supports (-moz-appearance:none) {
-        .layout-zoom-83 {
-            zoom: 1;
-            transform: scale(0.83);
-            transform-origin: top center;
-            width: 120.482%;
-            overflow-x: hidden;
-        }
-    }
-
-    .layout-zoom-82 {
-        zoom: 0.82;
-    }
-
-    @supports (-moz-appearance:none) {
-        .layout-zoom-82 {
-            zoom: 1;
-            transform: scale(0.82);
-            transform-origin: top center;
-            width: 121.951%;
-            overflow-x: hidden;
-        }
     }
 }
