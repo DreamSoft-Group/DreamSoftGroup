@@ -2,10 +2,15 @@
 
 namespace App\Models;
 
+use App\Enums\LeadStatus;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Lead extends Model
 {
+    /** @use HasFactory<\Database\Factories\LeadFactory> */
+    use HasFactory;
+
     protected $fillable = [
         'email',
         'status',
@@ -14,6 +19,13 @@ class Lead extends Model
     ];
 
     protected $casts = [
-        'status' => 'string',
+        'status' => LeadStatus::class,
     ];
+
+    public static function booted(): void
+    {
+        static::creating(function (self $lead): void {
+            $lead->status ??= LeadStatus::Pending;
+        });
+    }
 }

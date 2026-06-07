@@ -3,8 +3,9 @@
 namespace App\Filament\Resources\DevLogs\Schemas;
 
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
 
 class DevLogForm
@@ -13,15 +14,25 @@ class DevLogForm
     {
         return $schema
             ->components([
-                TextInput::make('project_id')
-                    ->required()
-                    ->numeric(),
-                TextInput::make('title')
+                Select::make('project_id')
+                    ->label('Proyecto')
+                    ->relationship('project', 'title')
+                    ->searchable()
+                    ->preload()
                     ->required(),
-                Textarea::make('content')
+                TextInput::make('title')
+                    ->label('Título')
+                    ->required()
+                    ->maxLength(255)
+                    ->columnSpanFull(),
+                RichEditor::make('content')
+                    ->label('Contenido')
                     ->required()
                     ->columnSpanFull(),
-                DateTimePicker::make('published_at'),
+                DateTimePicker::make('published_at')
+                    ->label('Fecha de Publicación')
+                    ->native(false)
+                    ->default(now()),
             ]);
     }
 }

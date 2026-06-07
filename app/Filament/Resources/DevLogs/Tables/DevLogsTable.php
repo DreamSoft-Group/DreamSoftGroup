@@ -14,19 +14,25 @@ class DevLogsTable
     {
         return $table
             ->columns([
-                TextColumn::make('project_id')
-                    ->numeric()
+                TextColumn::make('project.title')
+                    ->label('Proyecto')
+                    ->searchable()
                     ->sortable(),
                 TextColumn::make('title')
-                    ->searchable(),
+                    ->label('Título')
+                    ->searchable()
+                    ->wrap(),
                 TextColumn::make('published_at')
+                    ->label('Publicado')
                     ->dateTime()
                     ->sortable(),
                 TextColumn::make('created_at')
+                    ->label('Creado')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
+                    ->label('Actualizado')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

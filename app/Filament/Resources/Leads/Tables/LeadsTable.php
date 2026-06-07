@@ -15,19 +15,41 @@ class LeadsTable
         return $table
             ->columns([
                 TextColumn::make('email')
-                    ->label('Email address')
-                    ->searchable(),
+                    ->label('Email')
+                    ->searchable()
+                    ->copyable(),
                 TextColumn::make('status')
+                    ->label('Estado')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'pending' => 'gray',
+                        'approved' => 'info',
+                        'rejected' => 'danger',
+                        'converted' => 'success',
+                        default => 'gray',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'pending' => 'Pendiente',
+                        'approved' => 'Aprobado',
+                        'rejected' => 'Rechazado',
+                        'converted' => 'Convertido',
+                        default => $state,
+                    })
                     ->searchable(),
                 TextColumn::make('source')
-                    ->searchable(),
+                    ->label('Origen')
+                    ->searchable()
+                    ->toggleable(),
                 TextColumn::make('stripe_id')
-                    ->searchable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
+                    ->label('Stripe')
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('created_at')
+                    ->label('Creado')
+                    ->dateTime()
+                    ->sortable(),
                 TextColumn::make('updated_at')
+                    ->label('Actualizado')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

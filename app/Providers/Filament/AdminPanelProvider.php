@@ -36,7 +36,6 @@ class AdminPanelProvider extends PanelProvider
             ->font('Montserrat')
             ->brandName('The Dream Lab')
             ->darkMode(true)
-            ->viteTheme('resources/css/filament/admin/theme.css')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
@@ -44,6 +43,8 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
+                \App\Filament\Widgets\DreamLabStats::class,
+                \App\Filament\Widgets\LatestLeads::class,
                 AccountWidget::class,
                 FilamentInfoWidget::class,
             ])

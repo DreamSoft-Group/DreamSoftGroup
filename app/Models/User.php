@@ -2,21 +2,35 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Filament\Models\Contracts\FilamentUser;
-use Filament\Panel;
 
 class User extends Authenticatable implements FilamentUser
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
-    public function canAccessPanel(\Filament\Panel $panel): bool
+    public function canAccessPanel(Panel $panel): bool
     {
-        return str_ends_with($this->email, '@dreamsoftgroup.com') && $this->hasVerifiedEmail();
+        if (! $this->hasVerifiedEmail()) {
+            return false;
+        }
+
+        $allowlist = array_filter(array_map('trim', explode(',', (string) config('dreamlab.admin_allowlist', ''))));
+
+        if (empty($allowlist)) {
+            return str_ends_with($this->email, '@dreamsoftgroup.com');
+        }
+
+        return in_array($this->email, $allowlist, true);
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->canAccessPanel(app(Panel::class));
     }
 
     /**
